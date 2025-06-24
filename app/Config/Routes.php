@@ -74,6 +74,8 @@ $routes->group('admin', ['filter' => 'admin'], function($routes) {
     $routes->post('categories/store', 'Admin::storeCategory');
     $routes->post('categories/update/(:num)', 'Admin::updateCategory/$1');
     $routes->post('categories/delete/(:num)', 'Admin::deleteCategory/$1');
+    $routes->get('shop/kategori/(:segment)', 'Home::shopByCategory/$1');
+
     
     // Order Management
     $routes->get('orders', 'Admin::orders');

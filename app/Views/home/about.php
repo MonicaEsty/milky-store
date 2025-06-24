@@ -4,7 +4,7 @@
 
 <div class="container mt-4">
     <!-- Hero Section -->
-    <div class="jumbotron jumbotron-fluid" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('<?= base_url('images/about-bg.jpg') ?>'); background-size: cover; background-position: center;">
+    <div class="jumbotron jumbotron-fluid" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('<?= base_url('images/About.jpg') ?>'); background-size: cover; background-position: center;">
         <div class="container text-center text-white">
             <h1 class="display-4">Tentang Milky Dessert Box</h1>
             <p class="lead">Menghadirkan kelezatan dessert premium untuk setiap momen spesial Anda</p>
@@ -31,7 +31,8 @@
             </ul>
         </div>
         <div class="col-md-6">
-            <img src="<?= base_url('images/about-us.jpg') ?>" alt="About Us" class="img-fluid rounded">
+           <img src="<?= base_url('images/logo.png') ?>" alt="About Us" class="img-fluid rounded" width="150" height="auto">
+
             
             <div class="mt-4">
                 <h3>Mengapa Memilih Kami?</h3>
@@ -70,29 +71,38 @@
     </div>
 
     <!-- Team Section -->
+    <div class="container">
     <div class="row mt-5">
         <div class="col-12">
             <h2 class="text-center mb-4">Tim Kami</h2>
         </div>
-        <div class="col-md-4 text-center mb-4">
-            <img src="<?= base_url('images/team1.jpg') ?>" alt="Chef" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+    </div>
+
+    <div class="d-flex justify-content-center flex-wrap gap-5">
+        <div class="text-center" style="max-width: 250px;">
+            <img src="<?= base_url('images/chef.jpg') ?>" alt="Chef" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
             <h5>Chef Maria</h5>
-            <p class="text-muted">Head Chef</p>
-            <p>Berpengalaman 10+ tahun dalam dunia pastry dan dessert</p>
+            <p class="text-muted mb-1">Head Chef</p>
+            <p class="mb-0">Berpengalaman 10+ tahun dalam dunia pastry dan dessert</p>
         </div>
-        <div class="col-md-4 text-center mb-4">
-            <img src="<?= base_url('images/team2.jpg') ?>" alt="Manager" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+
+        <div class="text-center" style="max-width: 250px;">
+            <img src="<?= base_url('images/manager.jpg') ?>" alt="Manager" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
             <h5>Budi Santoso</h5>
-            <p class="text-muted">Operations Manager</p>
-            <p>Memastikan kualitas dan standar produksi terjaga</p>
+            <p class="text-muted mb-1">Operations Manager</p>
+            <p class="mb-0">Memastikan kualitas dan standar produksi terjaga</p>
         </div>
-        <div class="col-md-4 text-center mb-4">
-            <img src="<?= base_url('images/team3.jpg') ?>" alt="Customer Service" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+
+        <div class="text-center" style="max-width: 250px;">
+            <img src="<?= base_url('images/cs.jpg') ?>" alt="Customer Service" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
             <h5>Sari Dewi</h5>
-            <p class="text-muted">Customer Relations</p>
-            <p>Siap membantu Anda dengan pelayanan terbaik</p>
+            <p class="text-muted mb-1">Customer Relations</p>
+            <p class="mb-0">Siap membantu Anda dengan pelayanan terbaik</p>
         </div>
     </div>
 </div>
+
+</div>
+
 
 <?= $this->endSection() ?>

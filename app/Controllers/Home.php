@@ -59,6 +59,42 @@ class Home extends BaseController
 
         return view('home/shop', $data);
     }
+    public function shopByCategory($slug = null): string
+{
+    // Mapping slug ke nama kategori sesuai DB
+    $slugToCategoryName = [
+        'dessert-box' => 'Dessert Box',
+        'cake' => 'Cake',
+        'pudding' => 'Pudding'
+    ];
+
+    // Cek slug valid atau tidak
+    if (!isset($slugToCategoryName[$slug])) {
+        return redirect()->to('/shop');
+    }
+
+    // Ambil kategori berdasarkan nama (via CategoryModel)
+    $category = $this->categoryModel
+                     ->where('name', $slugToCategoryName[$slug])
+                     ->first();
+
+    if (!$category) {
+        return redirect()->to('/shop');
+    }
+
+    // Ambil produk berdasarkan ID kategori
+    $products = $this->productModel->getProductsByCategory($category['id']);
+
+    $data = [
+        'title' => $slugToCategoryName[$slug] . ' - Milky Dessert Box',
+        'products' => $products,
+        'categories' => $this->categoryModel->getActiveCategories(),
+        'keyword' => null,
+        'selectedCategory' => $category['id']
+    ];
+
+    return view('home/shop', $data);
+    }
 
     public function contact(): string
     {

@@ -61,6 +61,7 @@ class ProductModel extends Model
                     ->findAll();
     }
 
+    
     public function searchProducts($keyword)
     {
         return $this->select('products.*, categories.name as category_name')
