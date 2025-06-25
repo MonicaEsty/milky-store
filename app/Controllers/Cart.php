@@ -108,7 +108,9 @@ class Cart extends BaseController
     }
 
     public function checkout()
-    {
+    {   
+        log_message('debug', 'User ID from session: ' . print_r(session()->get('user_id'), true));
+
         $userId = session()->get('user_id');
         $cartItems = $this->cartModel->getCartItems($userId);
         

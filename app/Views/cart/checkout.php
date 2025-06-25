@@ -2,6 +2,7 @@
 
 <?= $this->section('content') ?>
 
+
 <div class="container mt-4">
     <h2>Checkout</h2>
     

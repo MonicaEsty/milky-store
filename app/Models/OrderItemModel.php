@@ -23,12 +23,14 @@ class OrderItemModel extends Model
     protected $useTimestamps = true;
     protected $dateFormat = 'datetime';
     protected $createdField = 'created_at';
+    protected $updatedField = 'updated_at';
 
     public function getOrderItems($orderId)
     {
-        return $this->select('order_items.*, products.name, products.image')
-                    ->join('products', 'products.id = order_items.product_id')
-                    ->where('order_items.order_id', $orderId)
-                    ->findAll();
+        return $this->select('order_items.*, products.name AS product_name, products.image')
+            ->join('products', 'products.id = order_items.product_id')
+            ->where('order_items.order_id', $orderId)
+            ->findAll();
+
     }
 }

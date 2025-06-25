@@ -49,11 +49,13 @@ $routes->group('checkout', ['filter' => 'auth'], function($routes) {
 });
 
 // Payment Routes
-$routes->group('payment', function($routes) {
+    $routes->group('payment', function($routes) {
     $routes->post('notification', 'Payment::notification');
     $routes->get('success/(:segment)', 'Payment::success/$1');
     $routes->get('pending/(:segment)', 'Payment::pending/$1');
     $routes->get('error/(:segment)', 'Payment::error/$1');
+    $routes->get('process/(:segment)', 'Payment::process/$1');
+
 });
 
 // Admin Routes
