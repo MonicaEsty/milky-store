@@ -4,17 +4,17 @@
 
 <!-- Carousel Section -->
 <section id="home">
-    <div id="carouselExampleIndicators" class="carousel slide animate__animated animate__fadeIn" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide animate_animated animate_fadeIn" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-            <div class="carousel-item active" style="background-image: url('<?= base_url('images/banner.jpg') ?>');">
+            <div class="carousel-item active" style="background-image: url('<?= base_url('images/bg pink.jpg') ?>');">
                 <div class="overlay" style="background: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
                 <div class="container h-full flex items-center justify-center text-center text-white relative">
-                    <div style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);" class="animate__animated animate__fadeInUp">
+                    <div style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);" class="animate_animated animate_fadeInUp">
                         <h1 class="text-5xl font-bold text-center text-white" style="font-family: 'Roboto', sans-serif; color: #ffcc00;">MILKY DESSERT BOX</h1>
                         <div class="text-center mt-6">
                         <a class="bg-pink-200 text-black py-2 px-4 rounded hover:bg-pink-300" href="#">Buy Now</a>
@@ -25,7 +25,7 @@
             <div class="carousel-item" style="background-image: url('<?= base_url('images/carousel.jpg') ?>');">
                 <div class="overlay" style="background: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
                 <div class="container h-full flex items-center justify-center text-center text-white relative">
-                    <div style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);" class="animate__animated animate__fadeInUp">
+                    <div style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);" class="animate_animated animate_fadeInUp">
                         <h1 class="text-5xl font-bold text-center text-white" style="font-family: 'Roboto', sans-serif; color: #ffcc00;">Makes Your Day With Milky Dessert Box</h1>
                         <div class="text-center mt-6">
                         <a class="bg-pink-200 text-black py-2 px-4 rounded hover:bg-pink-300" href="#">Buy Now</a>
@@ -36,7 +36,7 @@
             <div class="carousel-item" style="background-image: url('<?= base_url('images/banner2.jpg') ?>');">
                 <div class="overlay" style="background: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
                 <div class="container h-full flex items-center justify-center text-center text-white relative">
-                    <div style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);" class="animate__animated animate__fadeInUp">
+                    <div style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);" class="animate_animated animate_fadeInUp">
                         <h1 class="text-5xl font-bold text-center text-white" style="font-family: 'Roboto', sans-serif; color: #ffcc00;">Special Promo Buy 1 Get 1!</h1>
                         <div class="text-center mt-6">
                         <a class="bg-pink-200 text-black py-2 px-4 rounded hover:bg-pink-300" href="#">Buy Now</a>

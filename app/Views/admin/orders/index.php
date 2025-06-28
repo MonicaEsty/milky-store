@@ -89,9 +89,10 @@
                     <tr data-status="<?= $order['status'] ?>">
                         <td>
                             <strong><?= $order['order_number'] ?></strong>
-                            <?php if ($order['midtrans_payment_type']): ?>
-                                <br><small class="text-muted"><?= ucfirst($order['midtrans_payment_type']) ?></small>
+                            <?php if (!empty($order['midtrans_payment_type'])): ?>
+                                 <br><small class="text-muted"><?= ucfirst($order['midtrans_payment_type']) ?></small>
                             <?php endif; ?>
+
                         </td>
                         <td>
                             <strong><?= $order['full_name'] ?></strong>
@@ -117,7 +118,7 @@
                             <span class="badge badge-<?= $order['payment_status'] == 'paid' ? 'success' : ($order['payment_status'] == 'pending' ? 'warning' : 'danger') ?>">
                                 <?= ucfirst($order['payment_status']) ?>
                             </span>
-                            <?php if ($order['midtrans_transaction_time']): ?>
+                            <?php if (isset($order['midtrans_transaction_time']) && $order['midtrans_transaction_time']): ?>
                                 <br><small class="text-muted"><?= date('d/m/Y H:i', strtotime($order['midtrans_transaction_time'])) ?></small>
                             <?php endif; ?>
                         </td>

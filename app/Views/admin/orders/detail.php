@@ -64,15 +64,19 @@
                         <table class="table table-borderless">
                             <tr>
                                 <td><strong>Metode Pembayaran:</strong></td>
-                                <td><?= $order['midtrans_payment_type'] ? ucfirst($order['midtrans_payment_type']) : 'Midtrans' ?></td>
+                                <td>
+                                    <?= isset($order['midtrans_payment_type']) && $order['midtrans_payment_type']
+                                        ? ucfirst($order['midtrans_payment_type'])
+                                        : '<span class="text-muted">Belum tersedia</span>' ?>
+                                </td>
                             </tr>
-                            <?php if ($order['midtrans_transaction_id']): ?>
+                            <?php if (isset($order['midtrans_transaction_id']) && $order['midtrans_transaction_id']): ?>
                             <tr>
                                 <td><strong>Transaction ID:</strong></td>
                                 <td><?= $order['midtrans_transaction_id'] ?></td>
                             </tr>
                             <?php endif; ?>
-                            <?php if ($order['midtrans_transaction_time']): ?>
+                            <?php if (isset($order['midtrans_transaction_time']) && $order['midtrans_transaction_time']): ?>
                             <tr>
                                 <td><strong>Waktu Pembayaran:</strong></td>
                                 <td><?= date('d/m/Y H:i', strtotime($order['midtrans_transaction_time'])) ?></td>
@@ -105,7 +109,7 @@
                             <tr>
                                 <td>
                                     <div class="d-flex align-items-center">
-                                        <?php if ($item['image']): ?>
+                                        <?php if (!empty($item['image'])): ?>
                                             <img src="<?= base_url('images/' . $item['image']) ?>" alt="<?= $item['name'] ?>" style="width: 50px; height: 50px; object-fit: cover;" class="mr-3">
                                         <?php endif; ?>
                                         <span><?= $item['product_name'] ?></span>
@@ -120,12 +124,12 @@
                         <tfoot>
                             <tr>
                                 <th colspan="3" class="text-right">Subtotal:</th>
-                                <th>Rp <?= number_format($order['total_amount'], 0, ',', '.') ?></th>
+                                <th>Rp <?= number_format($order['total_amount'] ?? 0, 0, ',', '.') ?></th>
                             </tr>
                             <tr>
                                 <th colspan="3" class="text-right">Biaya Pengiriman:</th>
                                 <th>
-                                    <?php if ($order['shipping_cost'] > 0): ?>
+                                    <?php if (isset($order['shipping_cost']) && $order['shipping_cost'] > 0): ?>
                                         Rp <?= number_format($order['shipping_cost'], 0, ',', '.') ?>
                                     <?php else: ?>
                                         <span class="text-success">GRATIS</span>
@@ -134,7 +138,15 @@
                             </tr>
                             <tr class="table-primary">
                                 <th colspan="3" class="text-right">Total:</th>
-                                <th>Rp <?= number_format($order['grand_total'], 0, ',', '.') ?></th>
+                                <th>
+                                    Rp <?= number_format(
+                                        $order['grand_total'] ??
+                                        (($order['total_amount'] ?? 0) + ($order['shipping_cost'] ?? 0)),
+                                        0,
+                                        ',',
+                                        '.'
+                                    ) ?>
+                                </th>
                             </tr>
                         </tfoot>
                     </table>
@@ -176,7 +188,7 @@
             </div>
         </div>
 
-        <?php if ($order['notes']): ?>
+        <?php if (!empty($order['notes'])): ?>
         <div class="card mt-3">
             <div class="card-header">
                 <h5>Catatan</h5>
@@ -201,8 +213,8 @@
                             <small><?= date('d/m/Y H:i', strtotime($order['created_at'])) ?></small>
                         </div>
                     </div>
-                    
-                    <?php if ($order['payment_status'] == 'paid' && $order['midtrans_transaction_time']): ?>
+
+                    <?php if ($order['payment_status'] == 'paid' && isset($order['midtrans_transaction_time']) && $order['midtrans_transaction_time']): ?>
                     <div class="timeline-item">
                         <i class="fas fa-credit-card text-success"></i>
                         <div class="timeline-content">
@@ -211,7 +223,7 @@
                         </div>
                     </div>
                     <?php endif; ?>
-                    
+
                     <?php if ($order['status'] == 'processing'): ?>
                     <div class="timeline-item">
                         <i class="fas fa-cogs text-info"></i>
@@ -221,7 +233,7 @@
                         </div>
                     </div>
                     <?php endif; ?>
-                    
+
                     <?php if ($order['status'] == 'shipped'): ?>
                     <div class="timeline-item">
                         <i class="fas fa-truck text-warning"></i>
@@ -231,7 +243,7 @@
                         </div>
                     </div>
                     <?php endif; ?>
-                    
+
                     <?php if ($order['status'] == 'delivered'): ?>
                     <div class="timeline-item">
                         <i class="fas fa-check-circle text-success"></i>

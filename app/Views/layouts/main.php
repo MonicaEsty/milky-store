@@ -122,7 +122,11 @@
 <body class="bg-pink-50">
 
 <!-- Navbar -->
+<<<<<<< HEAD
 <nav class="navbar navbar-expand-lg shadow-sm animate__animated animate__fadeInDown">
+=======
+<nav class="navbar navbar-expand-lg shadow-sm animate_animated animate_fadeInDown">
+>>>>>>> 98e8f5520c85d556bf002236f06e24e646cc5976
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="<?= base_url('/') ?>">
       <img src="<?= base_url('images/logo.png') ?>" alt="Logo" />
@@ -134,6 +138,7 @@
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto d-flex align-items-center">
+<<<<<<< HEAD
         <li class="nav-item animate__animated animate__fadeInRight animate__delay-1s">
           <a class="nav-link" href="<?= base_url('/') ?>"><i class="fas fa-home"></i> Home</a>
         </li>
@@ -144,6 +149,18 @@
           <a class="nav-link" href="<?= base_url('/shop') ?>"><i class="fas fa-concierge-bell"></i> Shop</a>
         </li>
         <li class="nav-item animate__animated animate__fadeInRight animate__delay-4s">
+=======
+        <li class="nav-item animate_animated animatefadeInRight animate_delay-1s">
+          <a class="nav-link" href="<?= base_url('/') ?>"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li class="nav-item animate_animated animatefadeInRight animate_delay-2s">
+          <a class="nav-link" href="<?= base_url('/about') ?>"><i class="fas fa-info-circle"></i> About</a>
+        </li>
+        <li class="nav-item animate_animated animatefadeInRight animate_delay-3s">
+          <a class="nav-link" href="<?= base_url('/shop') ?>"><i class="fas fa-concierge-bell"></i> Shop</a>
+        </li>
+        <li class="nav-item animate_animated animatefadeInRight animate_delay-4s">
+>>>>>>> 98e8f5520c85d556bf002236f06e24e646cc5976
           <a class="nav-link" href="<?= base_url('/contact') ?>"><i class="fas fa-envelope"></i> Contact</a>
         </li>
 

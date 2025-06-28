@@ -13,10 +13,13 @@ class OrderModel extends Model
     protected $useSoftDeletes = false;
     protected $protectFields = true;
     protected $allowedFields = [
-        'user_id', 'order_number', 'total_amount', 'status', 
-        'payment_method', 'payment_status', 'midtrans_transaction_id',
-        'midtrans_order_id', 'shipping_address', 'notes'
+        'user_id', 'order_number', 'total_amount', 'shipping_cost', 'grand_total',
+        'customer_name', 'customer_email', 'customer_phone',
+        'status', 'payment_method', 'payment_status', 
+        'midtrans_transaction_id', 'midtrans_order_id', 
+        'shipping_address', 'notes'
     ];
+    
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

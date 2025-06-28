@@ -49,11 +49,13 @@ $routes->group('checkout', ['filter' => 'auth'], function($routes) {
 });
 
 // Payment Routes
-$routes->group('payment', function($routes) {
+    $routes->group('payment', function($routes) {
     $routes->post('notification', 'Payment::notification');
     $routes->get('success/(:segment)', 'Payment::success/$1');
     $routes->get('pending/(:segment)', 'Payment::pending/$1');
     $routes->get('error/(:segment)', 'Payment::error/$1');
+    $routes->get('process/(:segment)', 'Payment::process/$1');
+
 });
 
 // Admin Routes
@@ -74,6 +76,8 @@ $routes->group('admin', ['filter' => 'admin'], function($routes) {
     $routes->post('categories/store', 'Admin::storeCategory');
     $routes->post('categories/update/(:num)', 'Admin::updateCategory/$1');
     $routes->post('categories/delete/(:num)', 'Admin::deleteCategory/$1');
+    $routes->get('shop/kategori/(:segment)', 'Home::shopByCategory/$1');
+
     
     // Order Management
     $routes->get('orders', 'Admin::orders');
