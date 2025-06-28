@@ -17,7 +17,7 @@
                     <div style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);" class="animate__animated animate__fadeInUp">
                         <h1 class="text-5xl font-bold text-center text-white" style="font-family: 'Roboto', sans-serif; color: #ffcc00;">MILKY DESSERT BOX</h1>
                         <div class="text-center mt-6">
-                            <a href="<?= base_url('/shop') ?>" class="btn btn-lg btn-primary" style="font-family: 'Roboto', sans-serif; letter-spacing: 1px; background-color: #322800; border-color:#322800;">Buy Now</a>
+                        <a class="bg-pink-200 text-black py-2 px-4 rounded hover:bg-pink-300" href="#">Buy Now</a>
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                     <div style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);" class="animate__animated animate__fadeInUp">
                         <h1 class="text-5xl font-bold text-center text-white" style="font-family: 'Roboto', sans-serif; color: #ffcc00;">Makes Your Day With Milky Dessert Box</h1>
                         <div class="text-center mt-6">
-                            <a href="<?= base_url('/shop') ?>" class="btn btn-lg btn-primary" style="font-family: 'Roboto', sans-serif; letter-spacing: 1px; background-color: #322800; border-color: #322800;">Buy Now</a>
+                        <a class="bg-pink-200 text-black py-2 px-4 rounded hover:bg-pink-300" href="#">Buy Now</a>
                         </div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                     <div style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);" class="animate__animated animate__fadeInUp">
                         <h1 class="text-5xl font-bold text-center text-white" style="font-family: 'Roboto', sans-serif; color: #ffcc00;">Special Promo Buy 1 Get 1!</h1>
                         <div class="text-center mt-6">
-                            <a href="<?= base_url('/shop') ?>" class="btn btn-lg btn-primary" style="font-family: 'Roboto', sans-serif; letter-spacing: 1px; background-color: #322800; border-color: #322800;">Buy Now</a>
+                        <a class="bg-pink-200 text-black py-2 px-4 rounded hover:bg-pink-300" href="#">Buy Now</a>
                         </div>
                     </div>
                 </div>
