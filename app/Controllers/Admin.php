@@ -85,7 +85,7 @@ class Admin extends BaseController
             'stock' => $this->request->getPost('stock'),
             'weight' => $this->request->getPost('weight') ?: 300,
             'image' => $imageName,
-            'is_active' => $this->request->getPost('is_active') ? 1 : 0
+            'is_active' => $this->request->getPost('is_active') ? 1 : 1
         ];
 
         if ($this->productModel->insert($data)) {
