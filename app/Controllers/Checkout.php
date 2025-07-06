@@ -139,7 +139,9 @@ class Checkout extends BaseController
                 'product_name' => $product['name'],
                 'quantity' => $quantity,
                 'price' => $product['price'],
-                'subtotal' => $subtotal
+                'subtotal' => $subtotal,
+                'image' => $product['image'],
+                'name' => $product['name'] // Pastikan field ini ada di tabel order_items
             ];
             $this->orderItemModel->insert($orderItemData);
 
@@ -163,7 +165,7 @@ class Checkout extends BaseController
         if ($subtotal >= 100000) {
             return 0;
         }
-        
+
         // Standard shipping cost
         return 15000;
     }

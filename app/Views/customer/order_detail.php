@@ -72,8 +72,11 @@
                                 <tr>
                                     <td>
                                         <div class="d-flex align-items-center">
-                                            <img src="<?= base_url('images/' . $item['image']) ?>" alt="<?= $item['name'] ?>" style="width: 50px; height: 50px; object-fit: cover;" class="mr-3">
-                                            <span><?= $item['name'] ?></span>
+                                        <img src="<?= base_url('images/' . $item['image']) ?>"
+   
+ style="width: 50px; height: 50px; object-fit: cover;" class="mr-3">
+ <span><?= $item['product_name'] ?></span>
+
                                         </div>
                                     </td>
                                     <td>Rp <?= number_format($item['price'], 0, ',', '.') ?></td>
